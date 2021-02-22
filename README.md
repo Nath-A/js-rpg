@@ -18,7 +18,7 @@
 - [x] Créer le repo, cloner sur mon pc et pusher les premiers fichiers
 - [ ] Lire le briefing attentivement pour le comprendre
 - [ ] Organiser le reste de la semaine en fonction
-- [ ] Player 1 - (Challenge 1)[#challenge-1]
+- [ ] [Player 1 - Challenge 1](#challenge-1)
 
 ### 23/02
 
