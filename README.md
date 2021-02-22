@@ -14,14 +14,15 @@
 ---
 
 ## Organisation
-### 22/02
+### Lundi 22/02
 - [x] Créer le repo, cloner sur mon pc et pusher les premiers fichiers
-- [ ] Lire le briefing attentivement pour le comprendre
-- [ ] Organiser le reste de la semaine en fonction
-- [ ] [Player 1 - Challenge 1](#challenge-1)
+- [x] Lire le briefing
+- [ ] Ne pas paniquer parce qu'on est qu'aux tableaux en JS et qu'on a rien vu sur les objets ni le DOM... :thinking
+- [ ] Installer les addons utiles de l'[article découvert ce week-end](https://dev.to/ratuloss/my-productivity-setup-vs-code-4o9d)  
+- [ ] Commencer [Player 1 - Challenge 1](#challenge-1)
 
 ### 23/02
-
+- [ ] Finir [Player 1 - Challenge 1](#challenge-1)
 ### 24/02
 
 ### 25/02
