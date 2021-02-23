@@ -12,18 +12,26 @@
 15/03/2020 à 09h00
 
 ---
-
+## Maquette
+![Maquette de la page](images/maquette.jpg)
 ## Organisation
 ### Lundi 22/02
 - [x] Créer le repo, cloner sur mon pc et pusher les premiers fichiers
 - [x] Lire le briefing
-- [ ] Ne pas paniquer parce qu'on est qu'aux tableaux en JS et qu'on a rien vu sur les objets ni le DOM... :thinking
+- [ ] Ne pas paniquer parce qu'on est qu'aux tableaux en JS et qu'on a rien vu sur les objets ni le DOM... :thinking:
 - [ ] Installer les addons utiles de l'[article découvert ce week-end](https://dev.to/ratuloss/my-productivity-setup-vs-code-4o9d)  
 - [ ] Commencer [Player 1 - Challenge 1](#challenge-1)
 
 ### 23/02
-- [ ] Finir [Player 1 - Challenge 1](#challenge-1)
+- [x] Faire une maquette papier pour voir clairement ce qu'il faut comme contenu sur la page html
+- [x] ~~Finir~~ Continuer [Player 1 - Challenge 1](#challenge-1)
 ### 24/02
+**AM**
+- [ ] **FINIR** [Player 1 - Challenge 1](#challenge-1)
+
+**PM**
+- [ ] Faire [Player 1 - Challenge 2](#challenge-2)
+- [ ] Faire [Player 1 - Challenge 3](#challenge-3)
 
 ### 25/02
 
@@ -32,7 +40,7 @@
 ---
 
 
-## Process pour s'organiser par rapport à ca
+## Process pour s'organiser par rapport à ca (trouver comme les coachs ont fait pour masquer certains elements dans leur readme !)
 ### Player 1
 #### **Challenge 1:**  
 Create an HTML page with the following elements included:

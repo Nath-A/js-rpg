@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,31 +10,114 @@
     <script src="/js/character.js"></script>
     <script src="/js/gamelogic.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>RPG Project</h1>
-        <div class="test-vs">
-            <img src="https://placekitten.com/200/300" alt="placekitten" height="300px">
-            <strong>VS</strong>
-            <img src="https://placekitten.com/250/300" alt="placekitten" height="300px">
-        </div>
-        
     </header>
     <main>
         <section id="player-one">
+            <section class="creation">
+                <h2>Create your character !</h2>
+                <!-- <div class="name"><input type="text" name="character1-name" id="character1-name" placeholder="name of your charater"></div> -->
+                <div class="race">
+                    <div class="human">
+                        <h3>Humans</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">20% less damage taken</div>
+                    </div>
+                    <div class="orcs">
+                        <h3>Orcs</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">40% more max health</div>
+                    </div>
+                    <div class="elves">
+                        <h3>Elves</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">30% chance to deflect the attack back to the opponent. The attacker
+                            takes damage equal to 50% of the original hit. The elf takes no damage.</div>
+                    </div>
+                    <div class="vampires">
+                        <h3>Vampires</h3>
 
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">10% lifesteal from opponents current health at start of the vampire's
+                            turn.</div>
+                    </div>
+
+                </div>
+                <div class="items">
+                    <div class="boots">
+                        <h3>Boots</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">30% chance to dodge an attack</div>
+                    </div>
+                    <div class="staff">
+                        <h3>Staff</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">20% increase in healing</div>
+                    </div>
+                    <div class="sword">
+                        <h3>Sword</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">30% more damage</div>
+                    </div>
+                    <div class="bow">
+                        <h3>Bow</h3>
+                        <img src="https://placekitten.com/g/30/30" alt="placekitten">
+                        <div class="description">30% chance to attack twice</div>
+                    </div>
+                </div>
+                <div class="submit">
+                    <div>
+                        <input type="text" name="name" id="character1-name" placeholder="Choose an epic name !">
+                    </div>
+                    <div>
+                        <label for="character1-race">Choose a cool race</label>
+                        <select name="character1-race" id="character1-race">
+                            <option value="human">human</option>
+                            <option value="orc">orc</option>
+                            <option value="elf">elf</option>
+                            <option value="vampire">vampire</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="character1-item">Choose some stuff</label>
+                        <select name="character1-item" id="character1-item">
+                            <option value="boots">boots</option>
+                            <option value="staff">staff</option>
+                            <option value="sword">sword</option>
+                            <option value="bow">bow</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="playground"></section>
+            <section class="actions"></section>
         </section>
         <section id="vs">
             VS
         </section>
         <section id="player-two">
-            
+            <section class="creation">
+                <h2>Create your character !</h2>
+            </section>
+            <section class="playground"></section>
+            <section class="actions"></section>
         </section>
     </main>
     <footer>
-<p>Du blablabla pour tester</p>
+        <p>Made with love and epicness (... ça ne se dit pas...?) sur fond de <a href="https://www.youtube.com/watch?v=nuOIPnuUp0U" target="_blank" rel="noopener noreferrer">... non je n'écoute pas tout le temps la même chose...</a></p>
+        <p>Here is my <a href="https://github.com/nathalie-anneessens/js-rpg" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
+        <p>Thanks to <a href="https://www.freepik.com/home" target="_blank" rel="noopener noreferrer">freepik </a> <img src="images/genevite.png" alt="genevite" width="25px" height="25px" > and <a
+                href="http://https://game-icons.net/" target="_blank" rel="noopener noreferrer">Game-icons.net</a></p>
     </footer>
 </body>
+
 </html>
