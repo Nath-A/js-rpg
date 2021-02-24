@@ -19,17 +19,18 @@
 - [x] Créer le repo, cloner sur mon pc et pusher les premiers fichiers
 - [x] Lire le briefing
 - [ ] Ne pas paniquer parce qu'on est qu'aux tableaux en JS et qu'on a rien vu sur les objets ni le DOM... :thinking:
-- [ ] Installer les addons utiles de l'[article découvert ce week-end](https://dev.to/ratuloss/my-productivity-setup-vs-code-4o9d)  
-- [ ] Commencer [Player 1 - Challenge 1](#challenge-1)
+- [x] Installer les addons utiles de l'[article découvert ce week-end](https://dev.to/ratuloss/my-productivity-setup-vs-code-4o9d)... Ca a pris plus de temps que prévu.  
+- [x] Commencer [Player 1 - Challenge 1](#challenge-1)
 
 ### 23/02
-- [x] Faire une maquette papier pour voir clairement ce qu'il faut comme contenu sur la page html
+- [x] Faire une maquette papier pour voir clairement ce qu'il faut comme contenu sur la page html et ne pas coder à l'aveugle
 - [x] ~~Finir~~ Continuer [Player 1 - Challenge 1](#challenge-1)
 ### 24/02
 **AM**
-- [ ] **FINIR** [Player 1 - Challenge 1](#challenge-1)
+- [x] **FINIR** [Player 1 - Challenge 1](#challenge-1)... C'est pas tip-top-moumoute mais on s'en contentera. 
 
 **PM**
+- [ ] Ne pas paniquer devant le passage au JS
 - [ ] Faire [Player 1 - Challenge 2](#challenge-2)
 - [ ] Faire [Player 1 - Challenge 3](#challenge-3)
 
