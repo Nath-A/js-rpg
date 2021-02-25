@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Project</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/character.js"></script>
-    <script src="/js/gamelogic.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
@@ -23,6 +21,7 @@
     </header>
     <main>
         <section id="player-one">
+            <section id="creation-1">
             <section class="creation">
                 <h2>Create your character !</h2>
                 <div class="race">
@@ -99,11 +98,12 @@
                     <div><button id="create-character-1">Create your awesome character !</button></div>
                 </div>
             </section>
+        </section>
             <section class="playground"></section>
             <section class="actions">
-                <button id="hit">hit</button>
-                <button id="heal">heal</button>
-                <button id="yield">yield</button>
+                <button id="hit-1">hit</button>
+                <button id="heal-1">heal</button>
+                <button id="yield-1">yield</button>
 
             </section>
         </section>
@@ -111,6 +111,7 @@
             VS + lootlog... 
         </section> -->
         <section id="player-two">
+            <section id="creation-2">
             <section class="creation">
                 <h2>Create your character !</h2>
                 <div class="race">
@@ -187,13 +188,15 @@
                     <div><button id="create-character-2">Create your awesome character !</button></div>
                 </div>
             </section>
+            </section>
             <section class="playground"></section>
             <section class="actions">
-                <button id="hit">hit</button>
-                <button id="heal">heal</button>
-                <button id="yield">yield</button>
+                <button id="hit-2">hit</button>
+                <button id="heal-2">heal</button>
+                <button id="yield-2">yield</button>
             </section>
         </section>
+        <section id="vs">VS</section>
     </main>
     <footer>
         <p>Made with love and epicness (... ça ne se dit pas...?) sur fond de <a href="https://www.youtube.com/watch?v=nuOIPnuUp0U" target="_blank" rel="noopener noreferrer">... non je n'écoute pas tout le temps la même chose...</a></p>
@@ -201,6 +204,8 @@
         <p>Thanks to <a href="https://www.freepik.com/home" target="_blank" rel="noopener noreferrer">freepik </a> <img src="images/genevite.png" alt="genevite" width="25px" height="25px" > and <a
                 href="http://https://game-icons.net/" target="_blank" rel="noopener noreferrer">Game-icons.net</a></p>
     </footer>
+    <script src="js/character.js"></script>
+    <script src="js/gamelogic.js"></script>
 </body>
 
 </html>

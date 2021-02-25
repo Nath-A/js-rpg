@@ -31,13 +31,13 @@
 
 **PM**
 - [ ] Ne pas paniquer devant le passage au JS
-- [ ] Faire [Player 1 - Challenge 2](#challenge-2)
-- [ ] Faire [Player 1 - Challenge 3](#challenge-3)
+- [ ] Parcourir la matière théorique des exos du JS
 
 ### 25/02
-
+- [x] Faire [Player 1 - Challenge 2](#challenge-2)
+- [ ] Faire [Player 1 - Challenge 3](#challenge-3)
 ### 26/02
-
+- [ ] 
 ---
 
 

@@ -10,6 +10,7 @@ body
     background-repeat: no-repeat;
     background-position: center;
     /* color:#ffffff; */
+    min-height: 100vh;
     
 }
 /* -----------------------------HEADER----------------------------------- */
@@ -39,6 +40,7 @@ main
     border-radius: 20px;
     padding: 15px;
 
+
 }
 
 main #player-one, main #player-two
@@ -55,13 +57,14 @@ main #player-one, main #player-two
 main .creation
 {
     display: grid;
-    grid-template-columns: 5fr 3fr 1fr;
+    grid-template-columns: 5fr 5fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 
     "h2 h2 h2"
     "race item submit"
     ;
     gap:5px;
+    position: relative;
 }
 .creation h2
 {
@@ -155,6 +158,18 @@ main .creation
 {
     width: 50px;
 }
+
+/* -------------------------------VS-------------------------------------- */
+main #vs
+{
+    position: absolute;
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%);
+    font-size: 5rem;
+    font-family: 'Reggae One', cursive;
+
+}
 /* -----------------------------ACTIONS----------------------------------- */
 
 .actions
@@ -165,6 +180,7 @@ main .creation
 
 .actions button
 {
+    display:none;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
