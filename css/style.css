@@ -158,6 +158,16 @@ main .creation
 {
     width: 50px;
 }
+/* -------------------------------COMBAT LOG------------------------------ */
+#creation-1 .log-combat, #creation-2 .log-combat
+{
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #ffffff;
+    /* overflow-y: scroll; */
+    height: 20vh;
+    padding: 20px;
+}
 
 /* -------------------------------VS-------------------------------------- */
 main #vs
@@ -192,6 +202,8 @@ footer
     border-radius: 20px 20px 0 0 ;
     position: relative;
     bottom: 0;
+    font-size: 0.8rem;
+    padding: 10px 0;
 }
 
 footer a 
@@ -204,4 +216,9 @@ footer a
 footer p
 {
     margin: 10px;
+}
+
+footer img
+{
+    vertical-align: middle;
 }

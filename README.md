@@ -35,9 +35,12 @@
 
 ### 25/02
 - [x] Faire [Player 1 - Challenge 2](#challenge-2)
-- [ ] Faire [Player 1 - Challenge 3](#challenge-3)
+- [x] Faire [Player 1 - Challenge 3](#challenge-3)
+- [x] Faire [Player 1 - Challenge 4](#challenge-4)
+
 ### 26/02
-- [ ] 
+- [ ] Faire [Player 1 - Challenge 5](#challenge-5)
+- [ ] Trouver un moyen d'afficher l'avatar  
 ---
 
 

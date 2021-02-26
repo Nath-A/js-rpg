@@ -17,7 +17,8 @@ function Person(name,race,item){
     this.totalDamage = this.damage();
 
     this.displayChar = function(){
-        return console.log(`I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`);
+        // return console.log(`I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`);
+        return (`Welcome ! You are now a kick-ass ${this.race} named ${this.name}, you wield an epic ${this.item} and your total health point are ${this.maxHealth} !`);
     };
 }
 // var character01;
@@ -52,12 +53,15 @@ document.getElementById("create-character-1").addEventListener("click", () =>�
     logCombat=document.createElement("div");
     logCombat.classList.add("log-combat");
     containerLog.appendChild(logCombat);
-    // logCombat.innerHTML="Test hahahaha... On va bien rigoler.";
-    logCombat.innerHTML=character01.displayChar;
-
+    titleLog=document.createElement("h2");
+    titleLog.innerHTML="Combat log"
+    containerLog.appendChild(titleLog);
+  
+    logCombat.innerHTML=character01.displayChar()+"<br>";
+  
     
 
-    
+    //avec .textContent += 
     
 
 
@@ -83,6 +87,14 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
 
     // Faire disparaitre le choix de personnage une fois créé et faire un log a l'interieur
     document.getElementById("creation-2").innerHTML="";
+    containerLog=document.getElementById("creation-2");
+    logCombat=document.createElement("div");
+    logCombat.classList.add("log-combat");
+    containerLog.appendChild(logCombat);
+    // logCombat.innerHTML="Test hahahaha... On va bien rigoler.";
+    logCombat.innerHTML=character02.displayChar()+"<br>";
+
+
 
 
     
