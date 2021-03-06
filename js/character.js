@@ -5,11 +5,11 @@ function Person(name,race,item){
     this.item = item;
     this.currenthealth = 100;
     this.maxHealth = 100;
-    if (this.race=="orc") 
-    {
-        this.maxHealth = this.maxHealth *1.4;
-        this.currenthealth = this.currenthealth * 1.4;
-    }
+    // if (this.race=="orc") 
+    // {
+    //     this.maxHealth = this.maxHealth *1.4;
+    //     this.currenthealth = this.currenthealth * 1.4;
+    // }
 
     this.min = 3;
     this.maxDamage = 20;
@@ -50,9 +50,11 @@ document.getElementById("create-character-1").addEventListener("click", () =>�
 
     character01 = new Person(name1,race1,item1);
     //Possibilité de faire character01 = new Person(character-name1.value...) s'il n'y avait pas de tiret. 
-    // console.log("On va y arriver avant le 15/03");
+
     console.log(character01);
 
+    // essai de la fonction qui gère les races... 
+    races(character01,character01.race);
 
     //Mettre ici a l'interieur les displays et changements de styles
 
@@ -113,6 +115,9 @@ window.onload = function() 
     enemy = new Person(randomCharacter[0],randomCharacter[1],randomCharacter[2]);
 
     console.log(enemy);
+
+    // essai de la fonction qui gère les races... 
+    races(enemy,enemy.race);
 
     // Afficher les boutons de combat une fois le personnage  créé
     document.getElementById("hit-2").style.display="block";

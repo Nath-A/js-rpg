@@ -47,8 +47,9 @@
 - [x] **Player 2 - Challenge 1** :  *Create a js file named gamelogic.js. You are in charge of writing the game itself. Take a look at the character.js file you will have to use it.*   ... Bon bah... On l'a créé... On a ecrit des choses dedans... Et on les a finalement toutes mises dans character, mais... Advienne que pourra :sweat_smile: (61 lignes de commentaires...)
 - [x] **Player 2 - Challenge 2** : *Initiate a temporary character. We will use this to test our game logic.*  ...Il est randomisé et initialisé dans le fichier character.js... :thinking:
 - [ ] **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.* ... J'ai... rien compris. :facepalm:
-- [ ] Créer une fonction qui génère un avatar eco+ (4 lignes fonctionnelles sur 19)
-- [ ] **Player 2 - Challenge 4** : *Make the functions work with the character. See if the stats change on creation.* 
+- [x] Créer une fonction qui génère un avatar eco+ (4 lignes fonctionnelles sur 19 :clap: :clap: :clap:)
+- [x] Backuper et nettoyer gamelogic.js
+- [ ] **Player 2 - Challenge 4** : *Make the functions work with the character. See if the stats change on creation.*  
 - [ ] **Player 2 - Challenge 5** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
 
 ### A faire à la rentrée
