@@ -30,17 +30,31 @@
 - [x] **FINIR** [Player 1 - Challenge 1](#challenge-1)... C'est pas tip-top-moumoute mais on s'en contentera. 
 
 **PM**
-- [ ] Ne pas paniquer devant le passage au JS
-- [ ] Parcourir la matière théorique des exos du JS
+- [x] Ne pas **TROP** paniquer devant le passage au JS
+- [x] Parcourir la matière théorique des exos du JS
 
 ### 25/02
-- [x] Faire [Player 1 - Challenge 2](#challenge-2)
-- [x] Faire [Player 1 - Challenge 3](#challenge-3)
-- [x] Faire [Player 1 - Challenge 4](#challenge-4)
+- [x] **Player 1 - Challenge 2** : *Use the character.js file and save the inputs inside variables/an object, and use them to initiate new characters for both players.* 
+- [x] **Player 1 - Challenge 3** :*Make sure that only the title, VS screen and the input field are visible when creating the characters.*
+- [x] **Player 1 - Challenge 4** : *When the characters are created, the creation panel should disappear. After this, the moves & log panel should appear.*
 
 ### 26/02
-- [ ] Faire [Player 1 - Challenge 5](#challenge-5)
+- [ ] ~~Faire~~ Commencer **Player 1 - Challenge 5** : *Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.* 
 - [ ] Trouver un moyen d'afficher l'avatar  
+
+### Pendant les vacances
+- [x] Finir  **Player 1 - Challenge 5** 
+- [x] **Player 2 - Challenge 1** :  *Create a js file named gamelogic.js. You are in charge of writing the game itself. Take a look at the character.js file you will have to use it.*   ... Bon bah... On l'a créé... On a ecrit des choses dedans... Et on les a finalement toutes mises dans character, mais... Advienne que pourra :sweat_smile: (61 lignes de commentaires...)
+- [x] **Player 2 - Challenge 2** : *Initiate a temporary character. We will use this to test our game logic.*  ...Il est randomisé et initialisé dans le fichier character.js... :thinking:
+- [ ] **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.* ... J'ai... rien compris. :facepalm:
+- [ ] Créer une fonction qui génère un avatar eco+ (4 lignes fonctionnelles sur 19)
+- [ ] **Player 2 - Challenge 4** : *Make the functions work with the character. See if the stats change on creation.* 
+- [ ] **Player 2 - Challenge 5** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
+
+### A faire à la rentrée
+- [ ] Peaufiner l'affichage de l'avatar
+- [ ] 
+
 ---
 
 

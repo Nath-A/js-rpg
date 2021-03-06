@@ -22,88 +22,90 @@
     <main>
         <section id="player-one">
             <section id="creation-1">
-            <section class="creation">
-                <h2>Create your character !</h2>
-                <div class="race">
-                    <div class="human">
-                        <h3>Humans</h3>
-                        <img src="images/races/barbarian.svg" alt="human">
-                        <div class="description">20% less damage taken</div>
-                    </div>
-                    <div class="orcs">
-                        <h3>Orcs</h3>
-                        <img src="images/races/orc-head.svg" alt="orc head">
-                        <div class="description">40% more max health</div>
-                    </div>
-                    <div class="elves">
-                        <h3>Elves</h3>
-                        <img src="images/races/woman-elf-face.svg" alt="elf face">
-                        <div class="description">30% chance to deflect the attack back to the opponent. The attacker
-                            takes damage equal to 50% of the original hit. The elf takes no damage.</div>
-                    </div>
-                    <div class="vampires">
-                        <h3>Vampires</h3>
-                        <img src="images/races/vampire-dracula.svg" alt="vampire">
-                        <div class="description">10% lifesteal from opponents current health at start of the vampire's
-                            turn.</div>
-                    </div>
+                <section class="creation">
+                    <h2 id="title-character-1">Create your character !</h2>
+                    <div class="race">
+                        <div class="human">
+                            <h3>Humans</h3>
+                            <img src="images/races/barbarian.svg" alt="human">
+                            <div class="description">20% less damage taken</div>
+                        </div>
+                        <div class="orcs">
+                            <h3>Orcs</h3>
+                            <img src="images/races/orc-head.svg" alt="orc head">
+                            <div class="description">40% more max health</div>
+                        </div>
+                        <div class="elves">
+                            <h3>Elves</h3>
+                            <img src="images/races/woman-elf-face.svg" alt="elf face">
+                            <div class="description">30% chance to deflect the attack back to the opponent. The attacker
+                                takes damage equal to 50% of the original hit. The elf takes no damage.</div>
+                        </div>
+                        <div class="vampires">
+                            <h3>Vampires</h3>
+                            <img src="images/races/vampire-dracula.svg" alt="vampire">
+                            <div class="description">10% lifesteal from opponents current health at start of the
+                                vampire's
+                                turn.</div>
+                        </div>
 
-                </div>
-                <div class="items">
-                    <div class="boots">
-                        <h3>Boots</h3>
-                        <img src="images/items/boots.svg" alt="placekitten">
-                        <div class="description">30% chance to dodge an attack</div>
                     </div>
-                    <div class="staff">
-                        <h3>Staff</h3>
-                        <img src="images/items/wizard-staff.svg" alt="placekitten">
-                        <div class="description">20% increase in healing</div>
+                    <div class="items">
+                        <div class="boots">
+                            <h3>Boots</h3>
+                            <img src="images/items/boots.svg" alt="placekitten">
+                            <div class="description">30% chance to dodge an attack</div>
+                        </div>
+                        <div class="staff">
+                            <h3>Staff</h3>
+                            <img src="images/items/wizard-staff.svg" alt="placekitten">
+                            <div class="description">20% increase in healing</div>
+                        </div>
+                        <div class="sword">
+                            <h3>Sword</h3>
+                            <img src="images/items/two-handed-sword.svg" alt="placekitten">
+                            <div class="description">30% more damage</div>
+                        </div>
+                        <div class="bow">
+                            <h3>Bow</h3>
+                            <img src="images/items/crossbow.svg" alt="placekitten">
+                            <div class="description">30% chance to attack twice</div>
+                        </div>
                     </div>
-                    <div class="sword">
-                        <h3>Sword</h3>
-                        <img src="images/items/two-handed-sword.svg" alt="placekitten">
-                        <div class="description">30% more damage</div>
+                    <div class="submit">
+                        <div>
+                            <input type="text" name="character1-name" id="character1-name"
+                                placeholder="Choose an epic name !">
+                        </div>
+                        <div>
+                            <!-- <label for="character1-race">Choose a cool race</label> -->
+                            <select name="character1-race" id="character1-race">
+                                <option selected disabled="true">Choose a cool race</option>
+                                <option value="human">human</option>
+                                <option value="orc">orc</option>
+                                <option value="elf">elf</option>
+                                <option value="vampire">vampire</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!-- <label for="character1-item">Pick some stuff</label> -->
+                            <select name="character1-item" id="character1-item">
+                                <option selected disabled="true">Pick some stuff</option>
+                                <option value="boots">boots</option>
+                                <option value="staff">staff</option>
+                                <option value="sword">sword</option>
+                                <option value="bow">bow</option>
+                            </select>
+                        </div>
+                        <div><button id="create-character-1">Create your awesome character !</button></div>
                     </div>
-                    <div class="bow">
-                        <h3>Bow</h3>
-                        <img src="images/items/crossbow.svg" alt="placekitten">
-                        <div class="description">30% chance to attack twice</div>
-                    </div>
-                </div>
-                <div class="submit">
-                    <div>
-                        <input type="text" name="character1-name" id="character1-name" placeholder="Choose an epic name !">
-                    </div>
-                    <div>
-                        <!-- <label for="character1-race">Choose a cool race</label> -->
-                        <select name="character1-race" id="character1-race">
-                            <option selected disabled = "true">Choose a cool race</option>
-                            <option value="human">human</option>
-                            <option value="orc">orc</option>
-                            <option value="elf">elf</option>
-                            <option value="vampire">vampire</option>
-                        </select>
-                    </div>
-                    <div>
-                        <!-- <label for="character1-item">Pick some stuff</label> -->
-                        <select name="character1-item" id="character1-item">
-                            <option selected disabled = "true">Pick some stuff</option>
-                            <option value="boots">boots</option>
-                            <option value="staff">staff</option>
-                            <option value="sword">sword</option>
-                            <option value="bow">bow</option>
-                        </select>
-                    </div>
-                    <div><button id="create-character-1">Create your awesome character !</button></div>
-                </div>
+                </section>
             </section>
-        </section>
-            <section class="playground"></section>
+            <section id="playground-1"></section>
             <section class="actions">
-                <button id="hit-1">hit</button>
-                <button id="heal-1">heal</button>
-                <button id="yield-1">yield</button>
+                <button id="hit-1" class="hit">hit</button>
+                <button id="heal-1" class="heal">heal</button>
+                <button id="yield-1" class="yield">yield</button>
 
             </section>
         </section>
@@ -112,100 +114,107 @@
         </section> -->
         <section id="player-two">
             <section id="creation-2">
-            <section class="creation">
-                <h2>Create your character !</h2>
-                <div class="race">
-                    <div class="human">
-                        <h3>Humans</h3>
-                        <img src="images/races/barbarian.svg" alt="human">
-                        <div class="description">20% less damage taken</div>
-                    </div>
-                    <div class="orcs">
-                        <h3>Orcs</h3>
-                        <img src="images/races/orc-head.svg" alt="orc head">
-                        <div class="description">40% more max health</div>
-                    </div>
-                    <div class="elves">
-                        <h3>Elves</h3>
-                        <img src="images/races/woman-elf-face.svg" alt="elf face">
-                        <div class="description">30% chance to deflect the attack back to the opponent. The attacker
-                            takes damage equal to 50% of the original hit. The elf takes no damage.</div>
-                    </div>
-                    <div class="vampires">
-                        <h3>Vampires</h3>
-                        <img src="images/races/vampire-dracula.svg" alt="vampire">
-                        <div class="description">10% lifesteal from opponents current health at start of the vampire's
-                            turn.</div>
-                    </div>
+                <section class="creation">
+                    <h2 id="title-character-2">Create your character !</h2>
+                    <div class="race">
+                        <div class="human">
+                            <h3>Humans</h3>
+                            <img src="images/races/barbarian.svg" alt="human">
+                            <div class="description">20% less damage taken</div>
+                        </div>
+                        <div class="orcs">
+                            <h3>Orcs</h3>
+                            <img src="images/races/orc-head.svg" alt="orc head">
+                            <div class="description">40% more max health</div>
+                        </div>
+                        <div class="elves">
+                            <h3>Elves</h3>
+                            <img src="images/races/woman-elf-face.svg" alt="elf face">
+                            <div class="description">30% chance to deflect the attack back to the opponent. The attacker
+                                takes damage equal to 50% of the original hit. The elf takes no damage.</div>
+                        </div>
+                        <div class="vampires">
+                            <h3>Vampires</h3>
+                            <img src="images/races/vampire-dracula.svg" alt="vampire">
+                            <div class="description">10% lifesteal from opponents current health at start of the
+                                vampire's
+                                turn.</div>
+                        </div>
 
-                </div>
-                <div class="items">
-                    <div class="boots">
-                        <h3>Boots</h3>
-                        <img src="images/items/boots.svg" alt="placekitten">
-                        <div class="description">30% chance to dodge an attack</div>
                     </div>
-                    <div class="staff">
-                        <h3>Staff</h3>
-                        <img src="images/items/wizard-staff.svg" alt="placekitten">
-                        <div class="description">20% increase in healing</div>
+                    <div class="items">
+                        <div class="boots">
+                            <h3>Boots</h3>
+                            <img src="images/items/boots.svg" alt="placekitten">
+                            <div class="description">30% chance to dodge an attack</div>
+                        </div>
+                        <div class="staff">
+                            <h3>Staff</h3>
+                            <img src="images/items/wizard-staff.svg" alt="placekitten">
+                            <div class="description">20% increase in healing</div>
+                        </div>
+                        <div class="sword">
+                            <h3>Sword</h3>
+                            <img src="images/items/two-handed-sword.svg" alt="placekitten">
+                            <div class="description">30% more damage</div>
+                        </div>
+                        <div class="bow">
+                            <h3>Bow</h3>
+                            <img src="images/items/crossbow.svg" alt="placekitten">
+                            <div class="description">30% chance to attack twice</div>
+                        </div>
                     </div>
-                    <div class="sword">
-                        <h3>Sword</h3>
-                        <img src="images/items/two-handed-sword.svg" alt="placekitten">
-                        <div class="description">30% more damage</div>
+                    <div class="submit">
+                        <div>
+                            <input type="text" name="character2-name" id="character2-name"
+                                placeholder="Choose an epic name !">
+                        </div>
+                        <div>
+                            <!-- <label for="character1-race">Choose a cool race</label> -->
+                            <select name="character2-race" id="character2-race">
+                                <option selected disabled="true">Choose a cool race</option>
+                                <option value="human">human</option>
+                                <option value="orc">orc</option>
+                                <option value="elf">elf</option>
+                                <option value="vampire">vampire</option>
+                            </select>
+                        </div>
+                        <div>
+                            <!-- <label for="character1-item">Pick some stuff</label> -->
+                            <select name="character2-item" id="character2-item">
+                                <option selected disabled="true">Pick some stuff</option>
+                                <option value="boots">boots</option>
+                                <option value="staff">staff</option>
+                                <option value="sword">sword</option>
+                                <option value="bow">bow</option>
+                            </select>
+                        </div>
+                        <div><button id="create-character-2">Create your awesome character !</button></div>
                     </div>
-                    <div class="bow">
-                        <h3>Bow</h3>
-                        <img src="images/items/crossbow.svg" alt="placekitten">
-                        <div class="description">30% chance to attack twice</div>
-                    </div>
-                </div>
-                <div class="submit">
-                    <div>
-                        <input type="text" name="character2-name" id="character2-name" placeholder="Choose an epic name !">
-                    </div>
-                    <div>
-                        <!-- <label for="character1-race">Choose a cool race</label> -->
-                        <select name="character2-race" id="character2-race">
-                            <option selected disabled = "true">Choose a cool race</option>
-                            <option value="human">human</option>
-                            <option value="orc">orc</option>
-                            <option value="elf">elf</option>
-                            <option value="vampire">vampire</option>
-                        </select>
-                    </div>
-                    <div>
-                        <!-- <label for="character1-item">Pick some stuff</label> -->
-                        <select name="character2-item" id="character2-item">
-                            <option selected disabled = "true">Pick some stuff</option>
-                            <option value="boots">boots</option>
-                            <option value="staff">staff</option>
-                            <option value="sword">sword</option>
-                            <option value="bow">bow</option>
-                        </select>
-                    </div>
-                    <div><button id="create-character-2">Create your awesome character !</button></div>
-                </div>
+                </section>
             </section>
-            </section>
-            <section class="playground"></section>
+            <section id="playground-2"></section>
             <section class="actions">
-                <button id="hit-2">hit</button>
-                <button id="heal-2">heal</button>
-                <button id="yield-2">yield</button>
+                <button id="hit-2" class="hit">hit</button>
+                <button id="heal-2" class="heal">heal</button>
+                <button id="yield-2" class="yield">yield</button>
             </section>
         </section>
         <section id="vs">VS</section>
     </main>
     <footer>
-        <p>Made with love and epicness (... ça ne se dit pas...?) sur fond de <a href="https://www.youtube.com/watch?v=nuOIPnuUp0U" target="_blank" rel="noopener noreferrer">... non je n'écoute pas tout le temps la même chose...</a></p>
-        <p>Here is my messy <a href="https://github.com/nathalie-anneessens/js-rpg" target="_blank" rel="noopener noreferrer">GitHub repository</a></p>
-        <p>Thanks to <a href="https://www.freepik.com/home" target="_blank" rel="noopener noreferrer">freepik </a> <img src="images/genevite.png" alt="genevite" width="20px" height="20px" > and <a
+        <p>Made with love and epicness (... ça ne se dit pas...?) sur fond de <a
+                href="https://www.youtube.com/watch?v=nuOIPnuUp0U" target="_blank" rel="noopener noreferrer">... non je
+                n'écoute pas tout le temps la même chose...</a></p>
+        <p>Here is my messy <a href="https://github.com/nathalie-anneessens/js-rpg" target="_blank"
+                rel="noopener noreferrer">GitHub repository</a></p>
+        <p>Thanks to <a href="https://www.freepik.com/home" target="_blank" rel="noopener noreferrer">freepik </a> <img
+                src="images/genevite.png" alt="genevite" width="20px" height="20px"> and <a
                 href="https://game-icons.net/" target="_blank" rel="noopener noreferrer">Game-icons.net</a></p>
     </footer>
-    <script src="js/character.js"></script>
     <script src="js/gamelogic.js"></script>
+    <script src="js/character.js"></script>
+    
 </body>
 
 </html>
