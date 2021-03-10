@@ -58,9 +58,11 @@
 - [ ] ~~Optimiser un peu le code~~ (MAIS IL NE FONCTIONNE MEME PAS ENCORE... :facepalm:) -> 
 - [x] Commencer à créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
 - [x] Créer le log de combat en utilisant ce que je comprends (les InsertAdjacentHTML)
+- [x] Trouver un design de bouton un peu moins moche
 
 ### 11/03
 - [ ] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
+- [ ] Adapter le design du bouton heal aux autres
 
 ---
 

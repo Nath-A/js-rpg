@@ -27,7 +27,7 @@ function playing(id)
     console.log(characterPlaying);
     logCombat = document.getElementById(`log-combat-${id}`);
     console.log(logCombat);
-    // Ca ca ne fonctionne pas...
+    // Ca ca ne fonctionne pas : 
     // logCombat.innerHTML=characterPlaying.displayChar()+"<br>";
 
 }
