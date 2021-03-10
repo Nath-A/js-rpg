@@ -52,9 +52,15 @@
 - [ ] **Player 2 - Challenge 4** : *Make the functions work with the character. See if the stats change on creation.*  
 - [ ] **Player 2 - Challenge 5** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
 
-### A faire à la rentrée
-- [ ] Peaufiner l'affichage de l'avatar
-- [ ] 
+### 10/03
+- [x] Faire un code propre avec des `` au lieu des + 
+- [ ] Faire au mieux : **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.*
+- [ ] ~~Optimiser un peu le code~~ (MAIS IL NE FONCTIONNE MEME PAS ENCORE... :facepalm:) -> 
+- [x] Commencer à créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
+- [x] Créer le log de combat en utilisant ce que je comprends (les InsertAdjacentHTML)
+
+### 11/03
+- [ ] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
 
 ---
 

@@ -21,8 +21,7 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
     logCombat=document.createElement("div");
     logCombat.classList.add("log-combat");
     containerLog.appendChild(logCombat);
-    // logCombat.innerHTML="Test hahahaha... On va bien rigoler.";
-    logCombat.innerHTML=character02.displayChar()+"<br>";
+        logCombat.innerHTML=character02.displayChar()+"<br>";
 
     //Rajout du titre pour les logs
     titleLog = document.getElementById("creation-2");
@@ -30,9 +29,9 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
 
     //Afficher le nom du perso et sa barre de vie
     playgroundName = document.getElementById("playground-2");
-    playgroundName.insertAdjacentHTML("afterbegin","<h3 id='name-2'>"+ name2 +"</h3>");
+    playgroundName.insertAdjacentHTML("afterbegin",`<h3 id="name-2"> ${name2} </h3>`);
     healthBar = document.getElementById("name-2");
-    healthBar.insertAdjacentHTML("afterend","HP : <progress id='health-2' value='" + character02.currenthealth +"' max='"+ character02.maxHealth +"'></progress>"+ character02.currenthealth + "/" + character02.maxHealth)
+    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-2" value="${character02.currenthealth}" max="${character02.maxHealth}"></progress> ${character02.currenthealth} / ${character02.maxHealth}`);
 
     //Création de l'avatar
 

@@ -72,6 +72,12 @@ main .creation
     grid-area: h2;
 }
 
+#creation-2 button#random-enemy
+{
+    font-size: 0.62em;
+    vertical-align: middle;
+}
+
 .creation > div
 {
     border: 1px solid black;
@@ -193,6 +199,31 @@ main #vs
     display:none;
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+
+.actions button#hit-1, .actions button#hit-2
+{
+    color: red;
+    background-color: lightcoral;
+    /* border-color: -internal-light-dark(rgb(247, 55, 55), rgb(255, 136, 136)) !important; */
+}
+
+.actions button#heal-1, .actions button#heal-2
+{
+    color: green;
+    background-color: lightgreen;
+
+}
+
+.actions button#yield-1, .actions button#yield-2
+{
+    color: orange;
+    background-color: lightgoldenrodyellow;
+}
+.actions button:disabled
+{
+    background-color: grey !important;
+    color: lightgray !important;
 }
 /* -----------------------------FOOTER----------------------------------- */
 footer
