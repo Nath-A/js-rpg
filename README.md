@@ -61,8 +61,10 @@
 - [x] Trouver un design de bouton un peu moins moche
 
 ### 11/03
-- [ ] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
-- [ ] Adapter le design du bouton heal aux autres
+
+- [x] Adapter le design des boutons avec me code du générateur
+- [x] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
+- [x] Trouver un moyen que le VS ne soit pas un truc degueulasse en Absolute
 
 ---
 

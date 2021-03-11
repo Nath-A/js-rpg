@@ -29,7 +29,7 @@ function playing(id)
     console.log(logCombat);
     // Ca ca ne fonctionne pas : 
     // logCombat.innerHTML=characterPlaying.displayChar()+"<br>";
-
+    
 }
 
 
@@ -47,11 +47,21 @@ function randomEnemy()
     randomCharacter=[randomCreationName,randomCreationRace,randomCreationItem];
     return randomCharacter;
 }
-
+// Nom et barre de vie WIP
+function nameAndHealthBar(id,nickname,currentHealth,maxHealth)
+{
+    playgroundName = document.getElementById(`playground-${id}`);
+    playgroundName.insertAdjacentHTML("afterbegin",`<h3 id="name-${id}">${nickname}</h3>`);
+    currentHealth = currentHealth; 
+    maxHealth = maxHealth;
+    healthBar = document.getElementById(`name-${id}`);
+    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-${id}" value="${currentHealth}" max="${maxHealth}"></progress> ${currentHealth} / ${maxHealth}`);
+}
 // Avatar eco+
 function avatar(race, item, playerPG)
 {
-    playground=document.getElementById(playerPG);
+   
+    playground=document.getElementById(`playground-${playerPG}`);
     playground.insertAdjacentHTML("beforeend",`<div class="avatar-container">
     <img class="avatar" id="avatar-${playerPG}" width="100px" alt="avatar"><span id="avatar-bonus-${playerPG}"></span><br/>
     <img class="item" id="item-${playerPG}" width="100px" alt="item"><span id="item-bonus-${playerPG}"></span>

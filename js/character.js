@@ -52,17 +52,13 @@ document.getElementById("create-character-1").addEventListener("click", () =>�
     // Afficher le log parce que dans gamelogic, ça veut pas... 
     logCombat.innerHTML=character01.displayChar()+"<br>";
 
-
     //Afficher le nom du perso et sa barre de vie
-    playgroundName = document.getElementById("playground-1");
-    nickname = character01.name;
-    console.log("console log de nickname" +nickname);
-    playgroundName.insertAdjacentHTML(`afterbegin`,`<h3 id="name-1"> ${character01.name}</h3>`);
-    healthBar = document.getElementById("name-1");
-    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-1" value="${character01.currenthealth}" max="${character01.maxHealth}"></progress> ${character01.currenthealth} / ${character01.maxHealth}`)
+    nameAndHealthBar(1,character01.name,character01.currenthealth,character01.maxHealth);
     
     //Creation de l'avatar
-    avatar(character01.race,character01.item,"playground-1");
+
+    avatar(character01.race,character01.item,1);
+
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character01,1);
@@ -86,13 +82,10 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
     logCombat.innerHTML=character02.displayChar()+"<br>";
 
     //Afficher le nom du perso et sa barre de vie
-    playgroundName = document.getElementById("playground-2");
-    playgroundName.insertAdjacentHTML("afterbegin",`<h3 id="name-2"> ${character02.name} </h3>`);
-    healthBar = document.getElementById("name-2");
-    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-2" value="${character02.currenthealth}" max="${character02.maxHealth}"></progress> ${character02.currenthealth} / ${character02.maxHealth}`);
+    nameAndHealthBar(2,character02.name,character02.currenthealth,character02.maxHealth);
 
     //Création de l'avatar
-    avatar(character02.race,character02.item,"playground-2");
+    avatar(character02.race,character02.item,2);
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character02,2);
@@ -117,19 +110,15 @@ document.getElementById("random-enemy").addEventListener("click", () =>
     // Afficher le log parce que dans gamelogic, ça veut pas... 
     logCombat.innerHTML=enemy.displayChar()+"<br>";
 
-
     //test diminution santé pour tester le heal
     enemy.currenthealth = 50;
     
     //Afficher le nom du perso et sa barre de vie
-    playgroundName = document.getElementById("playground-2");
-    playgroundName.insertAdjacentHTML("afterbegin",`<h3 id="name-2">${enemy.name}</h3>`);
-    healthBar = document.getElementById("name-2");
-    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-2" value="${enemy.currenthealth}" max="${enemy.maxHealth}"></progress> ${ enemy.currenthealth} / ${enemy.maxHealth}`)
-
+    nameAndHealthBar(2,enemy.name,enemy.currenthealth,enemy.maxHealth);
+ 
     //Création de l'avatar
 
-    avatar(enemy.race,enemy.item,"playground-2");
+    avatar(enemy.race,enemy.item,2);
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(enemy,2);
