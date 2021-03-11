@@ -66,6 +66,8 @@
 - [x] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
 - [x] Trouver un moyen que le VS ne soit pas un truc degueulasse en Absolute
 
+### 12/03
+- [ ] AVANCER DANS LES FONCTIONNALITÉS DE GAMEPLAY ! 
 ---
 
 
