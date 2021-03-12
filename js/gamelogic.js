@@ -34,7 +34,7 @@ function playing(id)
 
 
 // Creer un nouveau personnage aléatoire
-function randomEnemy()
+function randomCharacterCreation()
 {
     randomName = ["Selton","Gobanno","Isara","Catvrix","Brictom","Belenos","Alesia","Inis Mona"];
     randomRace = ["human","orc","elf","vampire"];
@@ -55,7 +55,7 @@ function nameAndHealthBar(id,nickname,currentHealth,maxHealth)
     currentHealth = currentHealth; 
     maxHealth = maxHealth;
     healthBar = document.getElementById(`name-${id}`);
-    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-${id}" value="${currentHealth}" max="${maxHealth}"></progress> ${currentHealth} / ${maxHealth}`);
+    healthBar.insertAdjacentHTML("afterend",`HP : <progress id="health-${id}" value="${currentHealth}" max="${maxHealth}"></progress> <span id="health-value-${id}">${currentHealth}</span> / ${maxHealth}`);
 }
 // Avatar eco+
 function avatar(race, item, playerPG)
@@ -145,7 +145,7 @@ function races(character,race)
     switch (race) 
     {
         case "human" :
-            character.resistance = 120;
+            character.resistance = character.resistance * 1.2;
             break;
    
         case "orc":
@@ -154,19 +154,59 @@ function races(character,race)
             break;
 
         case "elf" :
-            character.deflection = 30;
-
+            function deflection(attacker,victim)
+            {
+                checkDeflection = Math.floor(Math.random() * 10);
+                if (checkDeflection < 4)
+                {
+                    character.deflection = 1;
+                }
+            }
+            
+            
             break;
             
         case "vampires" :
             function lifesteal(attacker,victim)
             {
-                stealing = victim.life*0.1;
+                stealing = victim.life * 0.1;
                 attacker.life = attacker.life + stealing;
                 victim.life = victim.life - stealing;
             }
                break;
             
+        default:
+            break;
+    }
+}
+
+function items(character,item)
+{
+    switch (item) {
+        case "boots":
+            checkDodge = Math.floor(Math.random() * 10) + 1;
+            if (checkDodge < 4)
+            {
+                character.dodge = 1;
+            }
+            break;
+        
+        case "staff":
+            character.maxHealing = character.maxHealth * 1.2;
+            break;
+
+        case "sword":
+            character.maxDamage = character.maxDamage * 1.3;
+            break;
+
+        case "bow":
+            checkAttackTwice = Math.floor(Math.random() * 10) + 1;
+            if (checkAttackTwice < 4)
+            {
+                character.attackNumber = 2;
+            }
+            break;
+
         default:
             break;
     }
@@ -181,3 +221,33 @@ function checkHealth(character,idPlayground)
         healButton.setAttribute("title","You are already at your maximum health... Don't abuse drugs !")
     }
 }
+
+//Gestion des boutons du character 01
+//Healing
+document.getElementById("heal-1").addEventListener("click", () =>
+{
+    character01.heal();
+    healthBar = document.getElementById(`health-1`);
+    characterHealth = character01.currenthealth;
+    healthBar.setAttribute("value",`${character01.currenthealth}`);
+    healthValue = document.getElementById("health-value-1");
+    healthValue.innerHTML=characterHealth;
+    
+    checkHealth(character01,1);
+    
+});
+
+//Gestion des boutons du character 02
+//Healing
+document.getElementById("heal-2").addEventListener("click", () =>
+{
+    character02.heal();
+    healthBar = document.getElementById(`health-2`);
+    characterHealth = character02.currenthealth;
+    healthBar.setAttribute("value",`${character02.currenthealth}`);
+    healthValue = document.getElementById("health-value-2");
+    healthValue.innerHTML=characterHealth;
+    
+    checkHealth(character02,2);
+    
+});

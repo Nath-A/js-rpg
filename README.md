@@ -1,7 +1,7 @@
 # 2. The Hill - RPG Project
 ## Informations utiles
 ### Liens utiles
-~~[Lien du projet](#)~~  **WIP !**
+[Lien du projet](https://nathalie-anneessens.github.io/js-rpg/)  **WIP !**
 
 [Lien des consignes](https://github.com/becodeorg/BXL-Swartz-4-27/tree/master/2.The-Hill/1.Javascript/rpg-project)
 
@@ -49,8 +49,8 @@
 - [ ] **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.* ... J'ai... rien compris. :facepalm:
 - [x] Créer une fonction qui génère un avatar eco+ (4 lignes fonctionnelles sur 19 :clap: :clap: :clap:)
 - [x] Backuper et nettoyer gamelogic.js
-- [ ] **Player 2 - Challenge 4** : *Make the functions work with the character. See if the stats change on creation.*  
-- [ ] **Player 2 - Challenge 5** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
+- [ ] **Player 2 - Challenge 4** : *Write a function that will handle the items. This will be called everytime we make a move.*  
+- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
 
 ### 10/03
 - [x] Faire un code propre avec des `` au lieu des + 
@@ -67,7 +67,25 @@
 - [x] Trouver un moyen que le VS ne soit pas un truc degueulasse en Absolute
 
 ### 12/03
+- [x] Mettre la création aleatoire sur les deux personnages
 - [ ] AVANCER DANS LES FONCTIONNALITÉS DE GAMEPLAY ! 
+- [x] **Player 2 - Challenge 3** : *Write a function that will handle the races. ~~This will only run once.~~*
+- [x] **Player 2 - Challenge 4** : *Write a function that will handle the items. ~~This will be called everytime we make a move.~~*  
+- [x] Comprendre pourquoi les images ne s'affichent pas sur la github page
+- [x] **Player 2 - Challenge 6** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
+
+### Week-end
+- [x] **Player 2 - Challenge 6** : Faire en sorte que le current health ne depasse pas le max health
+- [ ] Trouver un moyen de gerer les tours avec un event listener des boutons
+- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
+- [ ] Trouver un moyen pour que les fonctions races et items se lancent quand c'est demandé
+- [ ] **The Boss - Challenge 1** : *Combine the code + html for some 'working result'.*
+- [ ] **The Boss - Challenge 2** : *Inputs should generate the characters stats.*
+- [ ] **The Boss - Challenge 3** : *Work out the attack function (Almost the same as heal but it has to hit the enemy).*
+- [ ] **The Boss - Challenge 4** : *When a player loses, display a victory message & a loose message for each player.*
+- [ ] **The Boss - Challenge 5** : *At the end of the game, you should be able to restart the game to create a new character.*
+
+
 ---
 
 
