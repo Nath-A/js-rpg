@@ -27,12 +27,15 @@ function Person(name,race,item){
         {
             healingValue = Math.floor(Math.random()*this.maxHealing)+this.min;
             console.log(healingValue);
-            this.currenthealth = this.currenthealth + healingValue; 
-            if (this.currenthealth>this.maxHealth) 
+            if(this.currenthealth + healingValue <= this.maxHealth)
             {
-                this.currenthealth = this.maxHealth;
-                
-            } 
+                this.currenthealth = this.currenthealth + healingValue; 
+            }
+            else
+            {
+                healingValue = this.maxHealth - this.currenthealth;
+                this.currenthealth = this.maxHealth
+            }
             
             console.log(this.currenthealth);
             // return(this.currenthealth);
@@ -47,15 +50,28 @@ function Person(name,race,item){
 
     this.totalDamage = this.damage();
 
-    this.displayChar = function(){
-        // return console.log(`I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`);
-        return (`Welcome ! You are now a kick-ass ${this.race} named ${this.name}, you wield an epic ${this.item} and your total health point are ${this.maxHealth} !`);
+    // this.yield = function()
+    // {
+        
+    // };
+    this.displayChar = function()
+    {
+
+        if (this.item !="boots") 
+        {
+            return (`Welcome ! You are now a kick-ass ${this.race} named ${this.name}, you wield an epic ${this.item} and your total health point are ${this.maxHealth} !`);    
+        } 
+        else 
+        {
+            return (`Welcome ! You are now a kick-ass ${this.race} named ${this.name}, you wield some epic ${this.item} and your total health point are ${this.maxHealth} !`);
+        }
+        
     };
 }
-// var character01;
-// var character02="";
-// pas utile
 
+checkCharactersCreation=[];
+
+ // Création du personnage de gauche
 document.getElementById("create-character-1").addEventListener("click", () => 
 {
 
@@ -63,16 +79,17 @@ document.getElementById("create-character-1").addEventListener("click", () =>�
     characterCreation(1);
     character01 = new Person(character[0],character[1],character[2]);
     
-    // essai de la fonction qui gère les races... WIP !!!!
+    // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character01,character01.race);
+    items(character01,character01.item);
     console.log(character01);
 
-    //affichage des boutons de combat une fois le personnage créé
+    //Log de combat à la place des options de création du personnage
     playing(1);
     
     // Afficher le log parce que dans gamelogic, ça veut pas... 
     logCombat.innerHTML=character01.displayChar()+"<br>";
-
+    
     //Afficher le nom du perso et sa barre de vie
     nameAndHealthBar(1,character01.name,character01.currenthealth,character01.maxHealth);
     
@@ -80,11 +97,12 @@ document.getElementById("create-character-1").addEventListener("click", () =>�
 
     avatar(character01.race,character01.item,1);
 
-
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character01,1);
 
-    //pour les logs avec .textContent += 
+    //Affichage des boutons de combat une fois les 2 personnages créés
+    checkCharactersCreation.push(1);
+    charactersCreated();
 
 });
 
@@ -95,18 +113,20 @@ document.getElementById("random-character-1").addEventListener("click", () =>
     // Creer un nouveau personnage aléatoire
 
     randomCharacterCreation();
-    
     character01 = new Person(randomCharacter[0],randomCharacter[1],randomCharacter[2]);
    
-    // essai de la fonction qui gère les races... 
+    // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character01,character01.race);
-    console.log(character01);
+    items(character01,character01.item);
 
-    //affichage des boutons de combat une fois le personnage créé
+    //Log de combat à la place des options de création du personnage
     playing(1);
         
     // Afficher le log parce que dans gamelogic, ça veut pas... 
     logCombat.innerHTML=character01.displayChar()+"<br>";
+
+    //test diminution santé pour tester le heal
+    character01.currenthealth = 1;
     
     //Afficher le nom du perso et sa barre de vie
     nameAndHealthBar(1,character01.name,character01.currenthealth,character01.maxHealth);
@@ -117,21 +137,24 @@ document.getElementById("random-character-1").addEventListener("click", () =>
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character01,1);
-    
+
+    //Affichage des boutons de combat une fois les 2 personnages créés
+    checkCharactersCreation.push(1);
+    charactersCreated();
 
 });
-
+ // Création du personnage de droite
 document.getElementById("create-character-2").addEventListener("click", () => 
 {
     // Creer un nouveau personnage
     characterCreation(2);
     character02 = new Person(character[0],character[1],character[2]);
 
-    // essai de la fonction qui gère les races... WIP !!!!
+    // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character02,character02.race);
-    console.log(character02);
+    items(character02,character02.item);
 
-    //affichage des boutons de combat une fois le personnage créé
+    //Log de combat à la place des options de création du personnage
     playing(2);
     logCombat.innerHTML=character02.displayChar()+"<br>";
 
@@ -143,6 +166,10 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character02,2);
+
+    //Affichage des boutons de combat une fois les 2 personnages créés
+    checkCharactersCreation.push(1);
+    charactersCreated();
     
 });
 document.getElementById("random-character-2").addEventListener("click", () =>
@@ -154,31 +181,30 @@ document.getElementById("random-character-2").addEventListener("click", () =>
     randomCharacterCreation();
     
     character02 = new Person(randomCharacter[0],randomCharacter[1],randomCharacter[2]);
-    // essai de la fonction qui gère les races... 
+    // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character02,character02.race);
+    items(character02,character02.item);
     console.log(character02);
 
-    //affichage des boutons de combat une fois le personnage créé
+    //Log de combat à la place des options de création du personnage
     playing(2);
         
     // Afficher le log parce que dans gamelogic, ça veut pas... 
     logCombat.innerHTML=character02.displayChar()+"<br>";
 
     //test diminution santé pour tester le heal
-    character02.currenthealth = 50;
+    character02.currenthealth = 2;
     
     //Afficher le nom du perso et sa barre de vie
     nameAndHealthBar(2,character02.name,character02.currenthealth,character02.maxHealth);
  
     //Création de l'avatar
-
     avatar(character02.race,character02.item,2);
 
     // Desactivation du bouton heal si le perso a sa santé au max
     checkHealth(character02,2);
     
-
+    //Affichage des boutons de combat une fois les 2 personnages créés
+    checkCharactersCreation.push(1);
+    charactersCreated();
 });
-
-
-// listener de clic pour chaque bouton attaque/heal./truc qu'on sait pas ce que c'est -> ca affichera un texte au panneau des logs

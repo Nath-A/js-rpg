@@ -8,13 +8,13 @@ function characterCreation(id)
     return character;    
 }
 
-// Affichage des boutons de combat une fois le personnage créé et création du log de combat
+// Création du log de combat
 function playing(id)
 {
-    //Affichage des boutons du combat
-    document.getElementById(`hit-${id}`).style.display="block";
-    document.getElementById(`heal-${id}`).style.display="block";
-    document.getElementById(`yield-${id}`).style.display="block";
+    // //Affichage des boutons du combat
+    // document.getElementById(`hit-${id}`).style.display="block";
+    // document.getElementById(`heal-${id}`).style.display="block";
+    // document.getElementById(`yield-${id}`).style.display="block";
     
     //Suppression du contenu de creation et affichage des logs
     document.getElementById(`creation-${id}`).innerHTML="";
@@ -32,7 +32,29 @@ function playing(id)
     
 }
 
+//Affichage des boutons de combat une fois les 2 personnages créés
+function combatButtons()
+{
+    
+    document.getElementById(`hit-1`).style.display="block";
+    document.getElementById(`heal-1`).style.display="block";
+    document.getElementById(`yield-1`).style.display="block";
+    document.getElementById(`hit-2`).style.display="block";
+    document.getElementById(`heal-2`).style.display="block";
+    document.getElementById(`yield-2`).style.display="block";
+}
 
+//Vérification improvisée de la création de 2 personnages pour l'affichage des boutons
+function charactersCreated()
+{
+    if (checkCharactersCreation.length == 2)
+    {
+        combatButtons();
+        defineFirstOne();
+
+    }
+
+}
 // Creer un nouveau personnage aléatoire
 function randomCharacterCreation()
 {
@@ -139,7 +161,6 @@ function avatar(race, item, playerPG)
     }
 } 
 
-
 function races(character,race)
 {
     switch (race) 
@@ -162,8 +183,6 @@ function races(character,race)
                     character.deflection = 1;
                 }
             }
-            
-            
             break;
             
         case "vampires" :
@@ -192,7 +211,7 @@ function items(character,item)
             break;
         
         case "staff":
-            character.maxHealing = character.maxHealth * 1.2;
+            character.maxHealing = character.maxHealing * 1.2;
             break;
 
         case "sword":
@@ -218,10 +237,46 @@ function checkHealth(character,idPlayground)
     {
         healButton = document.getElementById(`heal-${idPlayground}`);
         healButton.setAttribute("disabled",true);
-        healButton.setAttribute("title","You are already at your maximum health... Don't abuse drugs !")
+        healButton.setAttribute("title","You are already at your maximum health... Don't abuse drugs !");
     }
 }
 
+// Fonction qui va pseudo-gerer les tours
+
+function changeTurn(idPlayerNow,idPlayerAfter)
+{
+    // Désactiver le boutons du joueur qui vient de jouer
+    document.getElementById(`hit-${idPlayerNow}`).setAttribute("disabled",true);
+    document.getElementById(`heal-${idPlayerNow}`).setAttribute("disabled",true);
+    document.getElementById(`yield-${idPlayerNow}`).setAttribute("disabled",true);
+    
+    // Réactiver les boutons du joueur qui va jouer
+    // checkHealth(`character0-${idPlayerAfter}`,idPlayerAfter);
+
+    document.getElementById(`hit-${idPlayerAfter}`).removeAttribute("disabled");
+    document.getElementById(`heal-${idPlayerAfter}`).removeAttribute("disabled");
+    document.getElementById(`yield-${idPlayerAfter}`).removeAttribute("disabled");
+}
+
+// Définition aléatoire du tour au démarrage
+function defineFirstOne()
+{
+    idFirstOne=Math.floor(Math.random()*2)+1;
+    console.log(idFirstOne);
+    idSecondOne = 0;
+    
+    if (idFirstOne == 1) 
+    {
+        idSecondOne = 2;
+    } 
+    else 
+    {
+        idSecondOne = 1;     
+    }
+    console.log(idFirstOne + "-" + idSecondOne);
+    changeTurn(idSecondOne,idFirstOne);
+
+}
 //Gestion des boutons du character 01
 //Healing
 document.getElementById("heal-1").addEventListener("click", () =>
@@ -233,9 +288,35 @@ document.getElementById("heal-1").addEventListener("click", () =>
     healthValue = document.getElementById("health-value-1");
     healthValue.innerHTML=characterHealth;
     
-    checkHealth(character01,1);
-    
+    healthLog = document.getElementById("log-combat-1");
+    healthLog.insertAdjacentHTML("beforeend",`You heal yourself of ${healingValue} HP ! You now have ${characterHealth} HP !<br>`);
+
+    changeTurn(1,2);
+    checkHealth(character02,2);
 });
+
+//Yield
+document.getElementById("yield-1").addEventListener("click",() =>
+{
+    winnerName = character02.name;
+    looserName = character01.name;
+    
+    yieldAlert = confirm(`${looserName} !? Are you sure you want to give up !?`);
+    if (yieldAlert == true) 
+    {
+        yieldLogLooser = document.getElementById("log-combat-1");
+        yieldLogLooser.insertAdjacentHTML("beforeend",`You are not brave enough for this fight...`);
+        yieldLogWinner = document.getElementById("log-combat-2");
+        yieldLogWinner.insertAdjacentHTML("beforeend",`You win the game because ${looserName} gives up...`);
+        setTimeout(function () 
+        {
+            alert(`${winnerName} wins the game thanks to ${looserName}'s cowardice !\nLet's try another game !`);
+            location.reload();
+        }, 5000);
+
+    }
+    
+})
 
 //Gestion des boutons du character 02
 //Healing
@@ -248,6 +329,31 @@ document.getElementById("heal-2").addEventListener("click", () =>
     healthValue = document.getElementById("health-value-2");
     healthValue.innerHTML=characterHealth;
     
-    checkHealth(character02,2);
+    healthLog = document.getElementById("log-combat-2");
+    healthLog.insertAdjacentHTML("beforeend",`You heal yourself of ${healingValue} HP ! You now have ${characterHealth} HP !<br>`);
     
+    changeTurn(2,1);
+    checkHealth(character01,1);
+
 });
+
+//Yield
+document.getElementById("yield-2").addEventListener("click",() =>
+{
+    winnerName = character01.name;
+    looserName = character02.name;
+    yieldAlert = confirm(`${looserName} !? Are you sure you want to give up !?`);
+    if (yieldAlert == true) 
+    {
+        yieldLogLooser = document.getElementById("log-combat-2");
+        yieldLogLooser.insertAdjacentHTML("beforeend",`You are not brave enough for this fight...`);
+        yieldLogWinner = document.getElementById("log-combat-1");
+        yieldLogWinner.insertAdjacentHTML("beforeend",`You win the game because ${looserName} gives up...`);
+        setTimeout(function () 
+        {
+            alert(`${winnerName} wins the game thanks to ${looserName}'s cowardice !\nLet's try another game !`);
+            location.reload();
+        }, 5000);
+    }
+    
+})

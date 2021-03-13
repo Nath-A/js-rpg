@@ -39,8 +39,8 @@
 - [x] **Player 1 - Challenge 4** : *When the characters are created, the creation panel should disappear. After this, the moves & log panel should appear.*
 
 ### 26/02
-- [ ] ~~Faire~~ Commencer **Player 1 - Challenge 5** : *Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.* 
-- [ ] Trouver un moyen d'afficher l'avatar  
+- [x] ~~Faire~~ Commencer **Player 1 - Challenge 5** : *Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.* 
+- [x] ~~Trouver~~ Chercher un moyen d'afficher l'avatar  
 
 ### Pendant les vacances
 - [x] Finir  **Player 1 - Challenge 5** 
@@ -76,14 +76,16 @@
 
 ### Week-end
 - [x] **Player 2 - Challenge 6** : Faire en sorte que le current health ne depasse pas le max health
-- [ ] Trouver un moyen de gerer les tours avec un event listener des boutons
-- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
+- [x] **Player 2 - Challenge 6** : Mettre le heal dans les logs
+- [x] Trouver un moyen de gerer les tours avec un event listener des boutons
+- [x] Créer une fonction qui fait démarrer au hasard l'un ou l'autre des joueurs
+- [] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
 - [ ] Trouver un moyen pour que les fonctions races et items se lancent quand c'est demandé
-- [ ] **The Boss - Challenge 1** : *Combine the code + html for some 'working result'.*
+- [x] **The Boss - Challenge 1** : *Combine the code + html for some 'working result'.*
 - [ ] **The Boss - Challenge 2** : *Inputs should generate the characters stats.*
 - [ ] **The Boss - Challenge 3** : *Work out the attack function (Almost the same as heal but it has to hit the enemy).*
-- [ ] **The Boss - Challenge 4** : *When a player loses, display a victory message & a loose message for each player.*
-- [ ] **The Boss - Challenge 5** : *At the end of the game, you should be able to restart the game to create a new character.*
+- [x] **The Boss - Challenge 4** : *When a player loses, display a victory message & a loose message for each player.*
+- [x] **The Boss - Challenge 5** : *At the end of the game, you should be able to restart the game to create a new character.*
 
 
 ---
