@@ -15,11 +15,11 @@ function Person(name,race,item){
 
     this.resistance = 100;
 
-    this.deflection = 0;
+    this.deflection = false;
 
     this.attackNumber = 1;
 
-    this.dodge = 0;
+    this.dodge = false;
 
     this.heal = function heal(id)
     {
@@ -37,7 +37,7 @@ function Person(name,race,item){
                 this.currenthealth = this.maxHealth
             }
             
-            console.log(this.currenthealth);
+            console.log(`current health : ${this.currenthealth}`);
             // return(this.currenthealth);
 
         }
@@ -45,7 +45,23 @@ function Person(name,race,item){
 
     this.damage = function()
     {
-
+        count = this.attackNumber;
+        damageValue = 0;
+        while (count>0) 
+        {
+            damageValue = damageValue + Math.floor(Math.random()*this.maxDamage)+this.min;
+            count = count - 1;
+            console.log(`damages : ${damageValue} and ${count}`);
+            
+        }
+        return damageValue;
+        // for(count ; count > 0 ; count --)
+        // {
+        //     damageValue = Math.floor(Math.random()*this.maxDamage)+this.min;
+        //     console.log(`damages : ${damageValue} and ${count}`);
+            
+        //     return damageValue;
+        // }
     };
 
     this.totalDamage = this.damage();
@@ -118,6 +134,8 @@ document.getElementById("random-character-1").addEventListener("click", () =>
     // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character01,character01.race);
     items(character01,character01.item);
+    console.log(character01);
+
 
     //Log de combat à la place des options de création du personnage
     playing(1);
@@ -153,6 +171,8 @@ document.getElementById("create-character-2").addEventListener("click", () =>�
     // essai de la fonction qui gère les races et les items... WIP !!!!
     races(character02,character02.race);
     items(character02,character02.item);
+    console.log(character02);
+
 
     //Log de combat à la place des options de création du personnage
     playing(2);

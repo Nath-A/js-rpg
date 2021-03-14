@@ -11,11 +11,7 @@ function characterCreation(id)
 // Création du log de combat
 function playing(id)
 {
-    // //Affichage des boutons du combat
-    // document.getElementById(`hit-${id}`).style.display="block";
-    // document.getElementById(`heal-${id}`).style.display="block";
-    // document.getElementById(`yield-${id}`).style.display="block";
-    
+
     //Suppression du contenu de creation et affichage des logs
     document.getElementById(`creation-${id}`).innerHTML="";
     titleLog = document.getElementById(`creation-${id}`);
@@ -24,9 +20,8 @@ function playing(id)
     containerLog.insertAdjacentHTML("afterbegin","<h2>What is happening !?</h2>");
         
     characterPlaying = "character0"+id;
-    console.log(characterPlaying);
+    // console.log(characterPlaying);
     logCombat = document.getElementById(`log-combat-${id}`);
-    console.log(logCombat);
     // Ca ca ne fonctionne pas : 
     // logCombat.innerHTML=characterPlaying.displayChar()+"<br>";
     
@@ -170,8 +165,9 @@ function races(character,race)
             break;
    
         case "orc":
-            character.currenthealth = character.currenthealth * 1.4;
             character.maxHealth = character.maxHealth *1.4;
+            character.currenthealth = character.maxHealth;
+            
             break;
 
         case "elf" :
@@ -180,7 +176,7 @@ function races(character,race)
                 checkDeflection = Math.floor(Math.random() * 10);
                 if (checkDeflection < 4)
                 {
-                    character.deflection = 1;
+                    character.deflection = true;
                 }
             }
             break;
@@ -206,7 +202,7 @@ function items(character,item)
             checkDodge = Math.floor(Math.random() * 10) + 1;
             if (checkDodge < 4)
             {
-                character.dodge = 1;
+                character.dodge = true;
             }
             break;
         
@@ -215,15 +211,18 @@ function items(character,item)
             break;
 
         case "sword":
-            character.maxDamage = character.maxDamage * 1.3;
+            character.damage = character.damage * 1.3;
             break;
 
         case "bow":
             checkAttackTwice = Math.floor(Math.random() * 10) + 1;
             if (checkAttackTwice < 4)
+            checkAttackTwice = 2;
             {
                 character.attackNumber = 2;
             }
+            console.log(checkAttackTwice);
+            console.log(character);
             break;
 
         default:
@@ -278,6 +277,15 @@ function defineFirstOne()
 
 }
 //Gestion des boutons du character 01
+// Fighting
+document.getElementById("hit-1").addEventListener("click",()=>
+{
+    character01.damage();
+    character02.currenthealth = character02.currenthealth - character01.total
+    changeTurn(1,2);
+    checkHealth(character02,2);
+});
+
 //Healing
 document.getElementById("heal-1").addEventListener("click", () =>
 {

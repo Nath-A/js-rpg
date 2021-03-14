@@ -55,7 +55,7 @@
 ### 10/03
 - [x] Faire un code propre avec des `` au lieu des + 
 - [ ] Faire au mieux : **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.*
-- [ ] ~~Optimiser un peu le code~~ (MAIS IL NE FONCTIONNE MEME PAS ENCORE... :facepalm:) -> 
+- [x] ~~Optimiser un peu le code~~ (MAIS IL NE FONCTIONNE MEME PAS ENCORE... :facepalm:)
 - [x] Commencer à créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
 - [x] Créer le log de combat en utilisant ce que je comprends (les InsertAdjacentHTML)
 - [x] Trouver un design de bouton un peu moins moche
@@ -68,7 +68,7 @@
 
 ### 12/03
 - [x] Mettre la création aleatoire sur les deux personnages
-- [ ] AVANCER DANS LES FONCTIONNALITÉS DE GAMEPLAY ! 
+- [x] AVANCER DANS LES FONCTIONNALITÉS DE GAMEPLAY ! 
 - [x] **Player 2 - Challenge 3** : *Write a function that will handle the races. ~~This will only run once.~~*
 - [x] **Player 2 - Challenge 4** : *Write a function that will handle the items. ~~This will be called everytime we make a move.~~*  
 - [x] Comprendre pourquoi les images ne s'affichent pas sur la github page
@@ -79,65 +79,17 @@
 - [x] **Player 2 - Challenge 6** : Mettre le heal dans les logs
 - [x] Trouver un moyen de gerer les tours avec un event listener des boutons
 - [x] Créer une fonction qui fait démarrer au hasard l'un ou l'autre des joueurs
-- [] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
-- [ ] Trouver un moyen pour que les fonctions races et items se lancent quand c'est demandé
 - [x] **The Boss - Challenge 1** : *Combine the code + html for some 'working result'.*
-- [ ] **The Boss - Challenge 2** : *Inputs should generate the characters stats.*
-- [ ] **The Boss - Challenge 3** : *Work out the attack function (Almost the same as heal but it has to hit the enemy).*
 - [x] **The Boss - Challenge 4** : *When a player loses, display a victory message & a loose message for each player.*
 - [x] **The Boss - Challenge 5** : *At the end of the game, you should be able to restart the game to create a new character.*
 
+### 30 min quoti
+- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
+- [ ] Trouver un moyen pour que les fonctions races et items se lancent quand c'est demandé
+- [ ] **The Boss - Challenge 2** : *Inputs should generate the characters stats.* **???**
+- [ ] **The Boss - Challenge 3** : *Work out the attack function (Almost the same as heal but it has to hit the enemy).*
+- [ ] **Life stuff** : Faire en sorte que le combat s'arrete une fois que la santé arrive à zero 
 
 ---
 
-
-## Process pour s'organiser par rapport à ca (trouver comme les coachs ont fait pour masquer certains elements dans leur readme !)
-### Player 1
-#### **Challenge 1:**  
-Create an HTML page with the following elements included:
-
-- A title.
-- An element to display both characters stats (visual, name, item, health...) - Something like a VS screen
-- A panel with 6 buttons, 3 for each player (hit, heal & yield. Those are the moves.)
-- A creation panel with inputs & dropdowns to create your character. (For now only name, items and race )
-- A log that will tell you which move the player made.
-
-#### **Challenge 2:**
-Use the character.js file and save the inputs inside variables/an object, and use them to initiate new characters for both players.
-
-#### **Challenge 3:**
-Make sure that only the title, VS screen and the input field are visible when creating the characters.
-
-#### **Challenge 4:**
-When the characters are created, the creation panel should disappear. After this, the moves & log panel should appear.
-
-#### **Challenge 5:**
-Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.
-
----
-
-### Player 2
-#### **Challenge 1:**
-Create a js file named gamelogic.js. You are in charge of writing the game itself. Take a look at the character.js file you will have to use it.
-
-Note: You will have to work with this file as well. Its up to you to find out what belongs where.
-
-#### **Challenge 2:**
-Initiate a temporary character. We will use this to test our game logic.
-
-#### **Challenge 3:**
-Write a function that will handle the races. This will only run once.
-
-#### **Challenge 4:**
-Write a function that will handle the items. This will be called everytime we make a move.
-
-#### **Challenge 5:**
-Make the functions work with the character. See if the stats change on creation.
-
-#### **Challenge 6:**
-Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.
-
-Note: The currentHealth should NEVER go above the maxHealth
-
----
 
