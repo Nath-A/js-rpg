@@ -91,28 +91,28 @@ function avatar(race, item, playerPG)
 
     switch (race) {
         case "human":
-            avatarImg.setAttribute("src","../images/races/barbarian.svg");
+            avatarImg.setAttribute("src","images/races/barbarian.svg");
             avatarImg.setAttribute("alt","avatar human");
             avatarImg.setAttribute("title","20% less damage taken");
             avatarBonus.insertAdjacentHTML("afterbegin","20% less damage taken");
             break;
 
         case "orc":
-            avatarImg.setAttribute("src","../images/races/orc-head.svg");
+            avatarImg.setAttribute("src","images/races/orc-head.svg");
             avatarImg.setAttribute("alt","avatar orc");
             avatarImg.setAttribute("title","40% more max health");
             avatarBonus.insertAdjacentHTML("afterbegin","40% more max health");
             break
 
         case "elf":
-            avatarImg.setAttribute("src","../images/races/woman-elf-face.svg");
+            avatarImg.setAttribute("src","images/races/woman-elf-face.svg");
             avatarImg.setAttribute("alt","avatar elf");
             avatarImg.setAttribute("title","30% chance to deflect the attack back to the opponent. The attacker takes damage equal to 50% of the original hit. The elf takes no damage.");
             avatarBonus.insertAdjacentHTML("afterbegin","30% chance to deflect the attack back to the opponent. The attacker takes damage equal to 50% of the original hit. The elf takes no damage.");
             break;
 
         case "vampire":
-            avatarImg.setAttribute("src","../images/races/vampire-dracula.svg");
+            avatarImg.setAttribute("src","images/races/vampire-dracula.svg");
             avatarImg.setAttribute("alt","avatar vampire");
             avatarImg.setAttribute("title","10% lifesteal from opponents current health at start of the vampire's turn.");
             avatarBonus.insertAdjacentHTML("afterbegin","10% lifesteal from opponents current health at start of the vampire's turn.");
@@ -124,28 +124,28 @@ function avatar(race, item, playerPG)
     switch (item) 
     {
         case "boots":
-            itemImg.setAttribute("src","../images/items/boots.svg");
+            itemImg.setAttribute("src","images/items/boots.svg");
             itemImg.setAttribute("alt","item boots");
             itemImg.setAttribute("title","30% chance to dodge an attack");
             itemBonus.insertAdjacentHTML("afterbegin","30% chance to dodge an attack");
             break;
 
         case "staff":
-            itemImg.setAttribute("src","../images/items/wizard-staff.svg");
+            itemImg.setAttribute("src","images/items/wizard-staff.svg");
             itemImg.setAttribute("alt","item staff");
             itemImg.setAttribute("title","20% increase in healing");
             itemBonus.insertAdjacentHTML("afterbegin","20% increase in healing");
             break;
 
         case "sword":
-            itemImg.setAttribute("src","../images/items/two-handed-sword.svg");
+            itemImg.setAttribute("src","images/items/two-handed-sword.svg");
             itemImg.setAttribute("alt","item sword");
             itemImg.setAttribute("title","30% more damage");
             itemBonus.insertAdjacentHTML("afterbegin","30% more damage");
             break;
 
         case "bow":
-            itemImg.setAttribute("src","../images/items/crossbow.svg");
+            itemImg.setAttribute("src","images/items/crossbow.svg");
             itemImg.setAttribute("alt","item bow");
             itemImg.setAttribute("title","30% chance to attack twice");
             itemBonus.insertAdjacentHTML("afterbegin","30% chance to attack twice");
