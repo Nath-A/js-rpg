@@ -1,10 +1,10 @@
 # 2. The Hill - RPG Project
 
 ## What!? 
-JS-RPG is a consolidation project I want to finish during summer pasturages. It is a battle between 2 players where you can choose between 4 races and 4 items. You can attack the other player, heal yourself or be a caward and yield.    
+JS-RPG is a consolidation project I want to finish during summer pasturages. It is a battle between 2 players where you can choose between 4 races and 4 items. You can attack the other player, heal yourself or be a coward and yield.    
 
 
-- Here is the [Link to test my project](https://nathalie-anneessens.github.io/js-rpg/)  **WIP !**
+- Here is the [Link to test my project](https://nathalie-anneessens.github.io/js-rpg/)  **WIP ! Random character has low life, so you can test the heal button**
 - If you are a Becodian, you can read the briefing [here !](https://github.com/becodeorg/BXL-Swartz-4-27/tree/master/2.The-Hill/1.Javascript/rpg-project)
 
 ### Wireframe
