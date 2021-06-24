@@ -1,95 +1,61 @@
 # 2. The Hill - RPG Project
-## Informations utiles
-### Liens utiles
-[Lien du projet](https://nathalie-anneessens.github.io/js-rpg/)  **WIP !**
 
-[Lien des consignes](https://github.com/becodeorg/BXL-Swartz-4-27/tree/master/2.The-Hill/1.Javascript/rpg-project)
-
----
+## What!? 
+JS-RPG is a consolidation project I want to finish during summer pasturages. It is a battle between 2 players where you can choose between 4 races and 4 items. You can attack the other player, heal yourself or be a caward and yield.    
 
 
-### Deadline
-15/03/2020 à 09h00
+- Here is the [Link to test my project](https://nathalie-anneessens.github.io/js-rpg/)  **WIP !**
+- If you are a Becodian, you can read the briefing [here !](https://github.com/becodeorg/BXL-Swartz-4-27/tree/master/2.The-Hill/1.Javascript/rpg-project)
 
----
-## Maquette
-![Maquette de la page](images/maquette.jpg)
-## Organisation
-### Lundi 22/02
-- [x] Créer le repo, cloner sur mon pc et pusher les premiers fichiers
-- [x] Lire le briefing
-- [ ] Ne pas paniquer parce qu'on est qu'aux tableaux en JS et qu'on a rien vu sur les objets ni le DOM... :thinking:
-- [x] Installer les addons utiles de l'[article découvert ce week-end](https://dev.to/ratuloss/my-productivity-setup-vs-code-4o9d)... Ca a pris plus de temps que prévu.  
-- [x] Commencer [Player 1 - Challenge 1](#challenge-1)
+### Wireframe
+![Wireframe](images/wireframe.jpg)
 
-### 23/02
-- [x] Faire une maquette papier pour voir clairement ce qu'il faut comme contenu sur la page html et ne pas coder à l'aveugle
-- [x] ~~Finir~~ Continuer [Player 1 - Challenge 1](#challenge-1)
-### 24/02
-**AM**
-- [x] **FINIR** [Player 1 - Challenge 1](#challenge-1)... C'est pas tip-top-moumoute mais on s'en contentera. 
+### Design (not responsive at all)
+*Screenshot comming soon*
 
-**PM**
-- [x] Ne pas **TROP** paniquer devant le passage au JS
-- [x] Parcourir la matière théorique des exos du JS
+### Features
+#### **Journey 1**
+- [x] Challenge 1.1: Create an HTML page with the following elements included:
+  - [x] A title.
+  - [x] An element to display both characters stats (visual, name, item, health...) Something like a VS screen
+  - [x] A panel with 6 buttons, 3 for each player (hit, heal & yield. Those are the moves.)
+  - [x] A creation panel with inputs & dropdowns to create your character. (For now only name, items and race )
+  - [ ] A log that will tell you which move the player made.
 
-### 25/02
-- [x] **Player 1 - Challenge 2** : *Use the character.js file and save the inputs inside variables/an object, and use them to initiate new characters for both players.* 
-- [x] **Player 1 - Challenge 3** :*Make sure that only the title, VS screen and the input field are visible when creating the characters.*
-- [x] **Player 1 - Challenge 4** : *When the characters are created, the creation panel should disappear. After this, the moves & log panel should appear.*
+- [x] Challenge 1.2: Use the character.js file and save the inputs inside variables/an object, and use them to initiate new characters for both players.
+- [x] Challenge 1.3: Make sure that only the title, VS screen and the input field are visible when creating the characters.
+- [x] Challenge 1.4: When the characters are created, the creation panel should disappear. After this, the moves & log panel should appear.
+- [x] Challenge 1.5: Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.  
+#### **Journey 2**
+- [x] Challenge 2.1: Create a js file named gamelogic.js. You are in charge of writing the game itself. Take a look at the character.js file you will have to use it.  
+*Note: You will have to work with this file as well. Its up to you to find out what belongs where.*
 
-### 26/02
-- [x] ~~Faire~~ Commencer **Player 1 - Challenge 5** : *Display the health bar of both players this should work real-time. Make sure it has a decrease/increase animation Make use of max-health and currentHealth.* 
-- [x] ~~Trouver~~ Chercher un moyen d'afficher l'avatar  
+- [x] Challenge 2.2: Initiate a temporary character. We will use this to test our game logic.
+- [x] Challenge 2.3: Write a function that will handle the races. ~~This will only run once.~~
+- [x] Challenge 2.4: Write a function that will handle the items. ~~This will be called everytime we make a move.~~
+- [x] Challenge 2.5: Make the functions work with the character. See if the stats change on creation.
+- [x] Challenge 2.6: Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.  
+*Note: The currentHealth should NEVER go above the maxHealth*
+#### **The Boss**
+- [x] Combine the code + html for some 'working result'.
+- [x] Inputs should generate the characters stats.
+- [ ] Work out the attack function (Almost the same as heal but it has to hit the enemy).
+- [x] When a player loses, display a victory message & a loose message for each player. 
+- [ ] At the end of the game, you should be able to restart the game to create a new character.
 
-### Pendant les vacances
-- [x] Finir  **Player 1 - Challenge 5** 
-- [x] **Player 2 - Challenge 1** :  *Create a js file named gamelogic.js. You are in charge of writing the game itself. Take a look at the character.js file you will have to use it.*   ... Bon bah... On l'a créé... On a ecrit des choses dedans... Et on les a finalement toutes mises dans character, mais... Advienne que pourra :sweat_smile: (61 lignes de commentaires...)
-- [x] **Player 2 - Challenge 2** : *Initiate a temporary character. We will use this to test our game logic.*  ...Il est randomisé et initialisé dans le fichier character.js... :thinking:
-- [ ] **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.* ... J'ai... rien compris. :facepalm:
-- [x] Créer une fonction qui génère un avatar eco+ (4 lignes fonctionnelles sur 19 :clap: :clap: :clap:)
-- [x] Backuper et nettoyer gamelogic.js
-- [ ] **Player 2 - Challenge 4** : *Write a function that will handle the items. This will be called everytime we make a move.*  
-- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
+## How!?
+By using VSCode, HTML5, CSS3 Javascript Vanilla and YouTube for a great epic sound ambiance.  
 
-### 10/03
-- [x] Faire un code propre avec des `` au lieu des + 
-- [ ] Faire au mieux : **Player 2 - Challenge 3** : *Write a function that will handle the races. This will only run once.*
-- [x] ~~Optimiser un peu le code~~ (MAIS IL NE FONCTIONNE MEME PAS ENCORE... :facepalm:)
-- [x] Commencer à créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
-- [x] Créer le log de combat en utilisant ce que je comprends (les InsertAdjacentHTML)
-- [x] Trouver un design de bouton un peu moins moche
+## Who!?
+I worked alone on this project, but I also ask some help to my collegues. 
 
-### 11/03
+## When!?
+We start this project in february... 
+(You can find my messy organization [here](organisation.md) in french...)
 
-- [x] Adapter le design des boutons avec me code du générateur
-- [x] Finir de créer des fonctions pour ne pas repeter 3 fois les lignes de codes dans le ficher character.js
-- [x] Trouver un moyen que le VS ne soit pas un truc degueulasse en Absolute
+I was not able to success before we begin to learn an other language, so now, I want to... ![Finish him](https://pbs.twimg.com/profile_images/1221372918460035072/71vqVsEC_400x400.jpg) !  
 
-### 12/03
-- [x] Mettre la création aleatoire sur les deux personnages
-- [x] AVANCER DANS LES FONCTIONNALITÉS DE GAMEPLAY ! 
-- [x] **Player 2 - Challenge 3** : *Write a function that will handle the races. ~~This will only run once.~~*
-- [x] **Player 2 - Challenge 4** : *Write a function that will handle the items. ~~This will be called everytime we make a move.~~*  
-- [x] Comprendre pourquoi les images ne s'affichent pas sur la github page
-- [x] **Player 2 - Challenge 6** : *Lower the health of your object and create a healing function that will use the heal function. (character.js) Make it so the function uses a random number between the minHealing and maxHealing.*
-
-### Week-end
-- [x] **Player 2 - Challenge 6** : Faire en sorte que le current health ne depasse pas le max health
-- [x] **Player 2 - Challenge 6** : Mettre le heal dans les logs
-- [x] Trouver un moyen de gerer les tours avec un event listener des boutons
-- [x] Créer une fonction qui fait démarrer au hasard l'un ou l'autre des joueurs
-- [x] **The Boss - Challenge 1** : *Combine the code + html for some 'working result'.*
-- [x] **The Boss - Challenge 4** : *When a player loses, display a victory message & a loose message for each player.*
-- [x] **The Boss - Challenge 5** : *At the end of the game, you should be able to restart the game to create a new character.*
-
-### 30 min quoti
-- [ ] **Player 2 - Challenge 5** : *Make the functions work with the character. See if the stats change on creation.*
-- [ ] Trouver un moyen pour que les fonctions races et items se lancent quand c'est demandé
-- [ ] **The Boss - Challenge 2** : *Inputs should generate the characters stats.* **???**
-- [ ] **The Boss - Challenge 3** : *Work out the attack function (Almost the same as heal but it has to hit the enemy).*
-- [ ] **Life stuff** : Faire en sorte que le combat s'arrete une fois que la santé arrive à zero 
-
----
+## Where!?
+Now, I am working on the readme from my bed... On the other days I worked from my living-room who is also my pseudo-work office. 
 
 
