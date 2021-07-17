@@ -171,7 +171,7 @@ function races(character,race)
             break;
 
         case "elf" :
-            function deflection(attacker,victim)
+            function deflection()
             {
                 checkDeflection = Math.floor(Math.random() * 10);
                 if (checkDeflection < 4)
@@ -241,7 +241,6 @@ function checkHealth(character,idPlayground)
 }
 
 // Fonction qui va pseudo-gerer les tours
-
 function changeTurn(idPlayerNow,idPlayerAfter)
 {
     // Désactiver le boutons du joueur qui vient de jouer
